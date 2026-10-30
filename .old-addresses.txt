@@ -1,0 +1,27 @@
+# Every address this site has had. The weekly old-address guard (Ai-Editor scripts/address_guard.py)
+# checks each one still works and forwards it if not. Add lines freely; never remove one.
+# archive: pending
+/
+/about-catherine/
+/about/
+/blog-post-1/
+/blog-post-2/
+/blog-post-3/
+/blog/
+/category/uncategorised/
+/contact/
+/content-blocks/
+/cookies-policy/
+/costs/
+/counselling-for-bereavement-loss/
+/counselling-for-depression/
+/counselling-for-stress-anxiety/
+/faqs/
+/fees/
+/first-meeting/
+/free-anxiety-depression-group-support/
+/privacy-policy/
+/terms-conditions/
+/testimonials/
+/the-counselling-space/
+/what-is-counselling/

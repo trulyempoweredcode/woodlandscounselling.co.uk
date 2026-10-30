@@ -1,0 +1,83 @@
+/* =============================================
+   THEME: Woodlands (client-local palette, local-themes/palettes/woodlands.json)
+   Catherine Nicholas's own colours from her live site
+   Font Pairing: Reading Serif (Merriweather + DM Sans)
+   ============================================= */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500&display=swap');
+
+/* --- Theme Variables --- */
+:root {
+  /* Colour Palette */
+  --color-primary: #660000;
+  --color-primary-light: #890000;
+  --color-primary-dark: #4A0000;
+  --color-secondary: #4E798E;
+  --color-secondary-light: #7397A9;
+  --color-secondary-dark: #3B5C6C;
+  --color-accent: #93A37E;
+  --color-accent-light: #B3C0A2;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #E4E8DF;
+  --color-bg-dark: #2A1616;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F3F3F3;
+  --color-text: #444444;
+  --color-text-light: #484848;
+  --color-text-inverse: #FFFFFF;
+  --color-text-heading: #3D3D3D;
+  --color-border: #D3D9CB;
+  --color-border-light: #E4E8DF;
+  --color-success: #5C7A4A;
+  --color-error: #B3261E;
+
+  /* Typography */
+  --font-heading: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --text-h1-desktop: clamp(2.4rem, 4.2vw, 3.5rem);
+  --text-h2-desktop: clamp(1.6rem, 2.3vw, 2rem);
+  --text-h3-desktop: 1.4rem;
+  --text-h2: 1.45rem;
+  --text-h1: 1.9rem;
+  --text-h3: 1.25rem;
+  --line-height-tight: 1.35;
+  --heading-weight: 400;
+  --hero-heading-color: var(--color-primary);
+  --footer-brand-color: var(--color-primary);
+  --intro-align: start;
+
+  /* Aesthetic: editorial (her site: 3px buttons, flat white cards) */
+  --aesthetic-radius: 6px;
+  --aesthetic-shadow-card: 0 1px 3px rgba(0,0,0,0.06);
+  --aesthetic-border-width: 1px;
+  --btn-radius: 3px;
+
+  /* Header: maroon name and tagline in sentence case, sage menu bar */
+  --nav-name-color: var(--color-primary);
+  --nav-title-transform: none;
+  --nav-title-tracking: 0;
+  --nav-name-size: clamp(1.6rem, 3.4vw, 2.75rem);
+  --nav-title-size: clamp(1rem, 1.6vw, 1.15rem);
+  --nav-two-tier-padding: 0;
+  --nav-title-phone-display: none;
+  --nav-call-phone-display: flex;
+  --nav-title-color: var(--color-primary);
+  --nav-title-font: var(--font-heading);
+  --nav-bar-bg: #93A37E;
+  --nav-bar-text: #1E2616;
+
+  /* Her pale sage hero panel and a readable BACP logo */
+  --hero-slope-panel: var(--color-bg-alt);
+  --trust-bar-logo-height: 96px;
+
+  /* Her handwritten sign-off */
+  --font-signature: 'Caveat', cursive;
+  --signature-style: normal;
+  --signature-size: 2rem;
+
+  /* The page boxed over her woodland photograph (body.page-frame) */
+  --page-frame-image: url('../images/woodland-background.jpg');
+  --page-frame-width: 1150px;
+  --page-frame-bg: #5F6B2E;
+}

@@ -1,0 +1,13 @@
+# Build sources and internal files - not part of the published site
+portal-content/
+reference-demo/
+build-scripts/
+local-themes/
+shots/
+stop1/
+stop2/
+client-brief.md
+client-preferences.json
+build-spec.json
+content-checklist.html
+images.json
