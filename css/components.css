@@ -12266,10 +12266,16 @@ main li:not([class]) a:not([class]) {
   color: var(--color-text-heading);
 }
 
-/* A sub-heading kept inside a bulleted list (the old site bulleted it) */
+/* A sub-heading kept inside a bulleted list (the old site bulleted it);
+   space above it --prose-list-heading-gap */
 .sidebar-layout__main li > h3,
 .sidebar-layout__main li > h4 {
-  margin: var(--space-md) 0;
+  margin: var(--prose-list-heading-gap, var(--space-md)) 0 var(--space-md);
+}
+
+/* a heading drawn at the page title's size keeps the title's own line height */
+.sidebar-layout__main .as-h1 {
+  line-height: var(--line-height-tight);
 }
 
 /* v1.7.26 token hooks for forms: --form-input-padding, --form-input-radius,

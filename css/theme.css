@@ -142,7 +142,8 @@
   --form-label-color: var(--color-text);
   --checklist-heading-size: 1.25rem;
   --prose-h2-gap: 8px;
-  --prose-h2-line-height: 1.6;
+  --prose-h2-line-height: clamp(1.35em, 1.1em + 1vw, 1.6em);
+  --prose-list-heading-gap: 40px;
   --prose-li-gap: 0px;
   --prose-li-line-height: 1.6;
   --trust-bar-padding: 0;
