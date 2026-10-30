@@ -144,6 +144,8 @@
   --prose-h2-gap: 8px;
   --prose-h2-line-height: clamp(1.35em, 1.1em + 1vw, 1.6em);
   --prose-list-heading-gap: 40px;
+  --reveal-root-margin: 0px;
+  --reveal-threshold: 0;
   --prose-li-gap: 0px;
   --prose-li-line-height: 1.6;
   --trust-bar-padding: 0;

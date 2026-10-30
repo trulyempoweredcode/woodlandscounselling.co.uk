@@ -349,6 +349,13 @@
      ----------------------------------------- */
   var revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
+    // v1.7.26 hooks: a site can start the reveal sooner (theme.css :root
+    // --reveal-root-margin: 0px; --reveal-threshold: 0) so a tall section at the
+    // bottom edge of the first screen is not shown as an empty band
+    // (woodlandscounselling.co.uk: her original shows it straight away).
+    var rootCss = getComputedStyle(document.documentElement);
+    var revealMargin = rootCss.getPropertyValue('--reveal-root-margin').trim() || '0px 0px -10% 0px';
+    var revealThreshold = parseFloat(rootCss.getPropertyValue('--reveal-threshold'));
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -357,8 +364,8 @@
         }
       });
     }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -10% 0px'
+      threshold: isNaN(revealThreshold) ? 0.08 : revealThreshold,
+      rootMargin: revealMargin
     });
 
     // Observe every reveal element. IntersectionObserver evaluates against the
