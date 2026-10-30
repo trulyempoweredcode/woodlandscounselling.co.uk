@@ -5,7 +5,7 @@
    ============================================= */
 
 /* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Caveat:wght@500&display=swap');
 
 /* --- Theme Variables --- */
 :root {
@@ -32,52 +32,141 @@
   --color-success: #5C7A4A;
   --color-error: #B3261E;
 
-  /* Typography */
+  /* Typography (measured on her live site at 1920, 1366 and 390px, 30-10-2026,
+     with scripts/style_parity.py) */
   --font-heading: 'Merriweather', Georgia, 'Times New Roman', serif;
   --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --text-h1-desktop: clamp(2.4rem, 4.2vw, 3.5rem);
-  --text-h2-desktop: clamp(1.6rem, 2.3vw, 2rem);
-  --text-h3-desktop: 1.4rem;
-  --text-h2: 1.45rem;
-  --text-h1: 1.9rem;
-  --text-h3: 1.25rem;
-  --line-height-tight: 1.35;
+  --text-h1-desktop: 2rem;
+  --text-h1: 2rem;
+  --text-h2-desktop: 1.75rem;
+  --text-h2: 1.625rem;
+  --text-h3-desktop: 1.5rem;
+  --text-h3: 1.5rem;
+  --line-height-tight: 1.4;
   --heading-weight: 400;
+  --h1-weight: 400;
+  --h2-weight: 600;
+  --h3-weight: 400;
+  --heading-tracking: -0.5px;
+  --prose-h2-size: clamp(1.5rem, 1.2vw + 1.1rem, 1.625rem);
+  --prose-h2-weight: 500;
+  --prose-p-gap: 14.4px;
+  --prose-h3-gap: 8px;
+  --prose-h3-after: 16px;
+  --text-note-size: 1rem;
+  --page-header-padding: 44px;
+  --page-header-padding-desktop: 52px;
+  --page-header-rule-width: 125px;
+  --page-header-rule-height: 3px;
+  --page-header-rule-gap: 14px;
+  --page-header-title-width: 750px;
+  --content-link-decoration: none;
+  --footer-legal-size: 13px;
+  --footer-name-size: clamp(2rem, 2.4vw, 2.125rem);
+  --strong-weight: 700;
   --hero-heading-color: var(--color-primary);
   --footer-brand-color: var(--color-primary);
   --intro-align: start;
 
-  /* Aesthetic: editorial (her site: 3px buttons, flat white cards) */
-  --aesthetic-radius: 6px;
-  --aesthetic-shadow-card: 0 1px 3px rgba(0,0,0,0.06);
-  --aesthetic-border-width: 1px;
-  --btn-radius: 3px;
+  /* Her page box: 90% of the window up to 1410px, content 1290px */
+  --container-max: 1330px;
+  --container-gutter: 20px;
+  --section-padding: 60px;
+  --section-padding-desktop: 60px;
 
-  /* Header: maroon name and tagline in sentence case, sage menu bar */
+  /* Aesthetic: square corners, no card frames (her site); 3px buttons */
+  --aesthetic-radius: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --aesthetic-shadow-card: none;
+  --aesthetic-border-width: 0px;
+  --btn-radius: 3px;
+  --btn-font-size: 1rem;
+  --btn-weight: 600;
+  --btn-transform: uppercase;
+  --btn-padding: 13px 15px;
+
+  /* Header: maroon name, tagline and her place on three lines, sage menu bar
+     with white words */
   --nav-name-color: var(--color-primary);
+  --nav-name-size: clamp(2.375rem, 3.1vw, 2.625rem);
+  --nav-name-weight: 500;
+  --nav-name-tracking: -1px;
   --nav-title-transform: none;
-  --nav-title-tracking: 0;
-  --nav-name-size: clamp(1.6rem, 3.4vw, 2.75rem);
-  --nav-title-size: clamp(1rem, 1.6vw, 1.15rem);
-  --nav-two-tier-padding: 0;
-  --nav-title-phone-display: none;
-  --nav-call-phone-display: flex;
+  --nav-title-tracking: -0.5px;
+  --nav-title-size: clamp(1.25rem, 1.8vw, 1.5rem);
   --nav-title-color: var(--color-primary);
   --nav-title-font: var(--font-heading);
+  --nav-top-padding: clamp(39px, 4.25vw, 58px);
+  --nav-top-padding-bottom: clamp(28px, 2.9vw, 40px);
+  --nav-place-gap: 22px;
+  --nav-brand-gap: 12px;
+  --form-label-size: 1.1875rem;
+  --nav-contact-size: 1.1875rem;
+  --nav-social-bg: #3B5998;
+  --nav-social-size: 32px;
   --nav-bar-bg: #93A37E;
-  --nav-bar-text: #1E2616;
+  --nav-bar-text: #FFFFFF;
+  --nav-bar-padding: 0px;
+  --nav-link-size: 17px;
+  --nav-link-weight: 500;
+  --nav-link-padding: 13px 20px;
+  --nav-link-gap: 0px;
+  --nav-active-line: 0%;
+  --nav-toggle-bg: var(--color-primary);
+  --nav-toggle-bar: #FFFFFF;
 
-  /* Her pale sage hero panel and a readable BACP logo */
+  /* Her slanted hero */
   --hero-slope-panel: var(--color-bg-alt);
+  --hero-cut-heading-size: 2rem;
+  --hero-cut-heading-gap: 64px;
+  --hero-lead-size: var(--text-md);
+
+  /* Her portrait card, therapy cards, tabs, CTA strip and footer card */
+  --profile-name-size: 1.5rem;
+  --profile-meta-size: 1rem;
+  --card-icon-size: 50px;
+  --card-text-size: var(--text-md);
+  --checklist-icon-size: 15px;
+  --cta-band-bg: var(--color-primary);
+  --cta-band-padding: 68px;
+  --cta-band-heading-gap: 20px;
+  --h2-gap: 20px;
+  --footer-card-padding-mobile: 30px 20px;
+  --form-input-padding: 11px 15px;
+  --form-input-radius: 7px;
+  --form-input-size: 1rem;
+  --form-textarea-height: 90px;
+  --form-label-weight: 500;
+  --form-label-color: var(--color-text);
+  --checklist-heading-size: 1.25rem;
+  --prose-h2-gap: 8px;
+  --prose-h2-line-height: 1.6;
+  --prose-li-gap: 0px;
+  --prose-li-line-height: 1.6;
+  --trust-bar-padding: 0;
+  --profile-card-padding-bottom: 40px;
+  --form-input-line-height: 1.25;
+  --form-label-gap: 4px;
+  --form-gap: 20px;
+  --form-top: 0px;
+  --contact-form-padding: clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px);
+  --contact-columns-gap: 60px;
+  --contact-map-height: 400px;
+  --contact-form-radius: 12px;
   --trust-bar-logo-height: 96px;
 
   /* Her handwritten sign-off */
   --font-signature: 'Caveat', cursive;
   --signature-style: normal;
-  --signature-size: 2rem;
+  --signature-size: 2.5rem;
 
   /* The page boxed over her woodland photograph (body.page-frame) */
   --page-frame-image: url('../images/woodland-background.jpg');
-  --page-frame-width: 1150px;
+  --page-frame-width: 1410px;
+  --page-frame-fluid: 90%;
+  --page-frame-gap: 25px;
+  --page-frame-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   --page-frame-bg: #5F6B2E;
 }
