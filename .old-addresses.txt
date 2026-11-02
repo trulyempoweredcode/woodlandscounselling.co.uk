@@ -1,6 +1,6 @@
 # Every address this site has had. The weekly old-address guard (Ai-Editor scripts/address_guard.py)
 # checks each one still works and forwards it if not. Add lines freely; never remove one.
-# archive: pending
+# archive: done
 /
 /about-catherine/
 /about/
@@ -46,3 +46,17 @@
 /8/Cost-&-Contact-Me.html
 /9/Client-Testimonials.html
 /online/
+/counselling-for-depression.html
+/what-is-counselling.html
+/counselling-for-stress-anxiety.html
+/counselling-for-bereavement-loss.html
+/free-anxiety-depression-group-support.html
+/first-meeting.html
+/costs.html
+/about-catherine.html
+/the-counselling-space.html
+/contact.html
+/cookies-policy.html
+/privacy-policy.html
+/terms-conditions.html
+/login.php
